@@ -1,0 +1,13 @@
+alias reload='. ~/.bash_profile'
+
+# cd
+alias ..='cd ..'
+
+alias tu="top -o cpu" #cpu
+alias tm="top -o vsize" #memory
+
+# git
+
+# rails
+alias ss="./script/server"
+alias sa="./script/autospec"
