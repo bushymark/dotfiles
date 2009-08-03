@@ -1,0 +1,9 @@
+export EDITOR="mate -w"
+export PATH=~/bin:$PATH
+
+
+#Path before I wrecked it
+#/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin
+
+#manpath
+#/opt/local/share/man:/usr/share/man:/usr/local/share/man:/usr/X11/man:/usr/local/git/man
