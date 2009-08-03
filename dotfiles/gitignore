@@ -1,0 +1,5 @@
+.DS_STORE
+*.sqlite3
+.svn
+*~
+*.log

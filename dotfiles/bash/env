@@ -1,9 +1,15 @@
 export EDITOR="mate -w"
-export PATH=~/bin:$PATH
+
+alias ruby19="export PATH=/opt/ruby19/bin:$PATH"
+
+export GIT_EDITOR="mate -w"
+export GIT_EXTERNAL_DIFF=~/bin/git-external-chdiff.sh
 
 
-#Path before I wrecked it
-#/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin
 
-#manpath
-#/opt/local/share/man:/usr/share/man:/usr/local/share/man:/usr/X11/man:/usr/local/git/man
+export EDITOR="mate -w"
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH
+
+# MacPorts Installer addition on 2009-03-09_at_11:23:58: adding an appropriate MANPATH variable for use with MacPorts.
+# Finished adapting your MANPATH environment variable for use with MacPorts.
+export MANPATH=/opt/local/share/man:$MANPATH
