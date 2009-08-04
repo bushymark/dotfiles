@@ -7,7 +7,23 @@ alias tu="top -o cpu" #cpu
 alias tm="top -o vsize" #memory
 
 # git
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gco='git checkout'
+alias gb='git branch'
+alias gs='git status'
+
 
 # rails
 alias ss="./script/server"
 alias sa="./script/autospec"
+alias sc='script/console'
+alias tlog='tail -f log/development.log'
+alias migrate='rake db:migrate db:test:clone'
+alias rst='touch tmp/restart.txt'
+
+# ruby 1.9
+#  alias ruby19="export PATH=/opt/ruby19/bin:$PATH"

@@ -1,7 +1,5 @@
 export EDITOR="mate -w"
 
-alias ruby19="export PATH=/opt/ruby19/bin:$PATH"
-
 export GIT_EDITOR="mate -w"
 export GIT_EXTERNAL_DIFF=~/bin/git-external-chdiff.sh
 
