@@ -26,4 +26,4 @@ alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 
 # ruby 1.9
-#  alias ruby19="export PATH=/opt/ruby19/bin:$PATH"
+alias ruby19="export PATH=/opt/ruby19/bin:$PATH"

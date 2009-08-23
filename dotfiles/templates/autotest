@@ -2,7 +2,7 @@
 module Autotest::Growl
 
   def self.growl title, msg, img, pri=0, stick=""
-    system "growlnotify -H localhost -n autotest --image #{img} -p #{pri} -m #{msg.inspect} #{title} #{stick}"
+    system "growlnotify -H localhost --image #{img} -p #{pri} -m #{msg.inspect} #{title} #{stick}" #-n autotest
   end
 
   Autotest.add_hook :run_command do

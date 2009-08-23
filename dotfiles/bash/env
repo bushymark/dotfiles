@@ -1,7 +1,7 @@
 export EDITOR="mate -w"
 
 export GIT_EDITOR="mate -w"
-export GIT_EXTERNAL_DIFF=~/bin/git-external-chdiff.sh
+#export GIT_EXTERNAL_DIFF=~/bin/git-external-chdiff.sh
 
 
 
