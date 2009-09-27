@@ -1,0 +1,9 @@
+[user]
+	name = BushyMark
+	email = bushymark@gmail.com
+[color]
+	ui = auto
+[push]
+	default = tracking
+[pack]
+	threads = 0
