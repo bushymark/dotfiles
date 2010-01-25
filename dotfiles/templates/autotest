@@ -1,6 +1,6 @@
 #require 'autotest/fsevent'
 module Autotest::Growl
-
+  	
   def self.growl title, msg, img, pri=0, stick=""
     system "growlnotify -H localhost --image #{img} -p #{pri} -m #{msg.inspect} #{title} #{stick}" #-n autotest
   end

@@ -27,3 +27,8 @@ alias rst='touch tmp/restart.txt'
 
 # ruby 1.9
 alias ruby19="export PATH=/opt/ruby19/bin:$PATH"
+
+# nginx
+alias nxs="sudo launchctl load /Library/LaunchDaemons/net.nginx.plist"
+alias nxst="sudo launchctl unload /Library/LaunchDaemons/net.nginx.plist"
+alias nxrs="nxst && nxs"
