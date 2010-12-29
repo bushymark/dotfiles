@@ -25,10 +25,35 @@ alias tlog='tail -f log/development.log'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 
-# ruby 1.9
-alias ruby19="export PATH=/opt/ruby19/bin:$PATH"
-
 # nginx
 alias nxs="sudo launchctl load /Library/LaunchDaemons/net.nginx.plist"
 alias nxst="sudo launchctl unload /Library/LaunchDaemons/net.nginx.plist"
 alias nxrs="nxst && nxs"
+
+# link to steam
+alias linksteam='ln -s /Users/bushiemark/Library/Application\ Support/Steam/Steam\ Content /Users/bushiemark/Dropbox/Documents/Steam\ Content'
+alias unlinksteam="rm /Users/bushiemark/Dropbox/Documents/Steam\ Content"
+
+# rvm commands
+alias 187='rvm use 1.8.7'
+alias 191='rvm use 1.9.1'
+alias 192='rvm use 1.9.2'
+alias system='rvm use system'
+
+alias tm191="rvm wrapper 1.9.1 textmate"
+alias tm191Intersect="rvm wrapper 1.9.1@intersect textmate"
+alias tm192="rvm wrapper 1.9.2 textmate"
+alias tmRails3="rvm wrapper 1.9.2@rails3 textmate"
+alias tm187="rvm wrapper 1.8.7 textmate"
+
+# Command line shortcuts to toggle visibility of hidden files in finder:
+alias show_hidden="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
+alias hide_hidden="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
+
+# You can transfer a working directory from one Terminal window to another with 
+# these two commands added to your .bash_profile file:
+alias cwd='pwd | pbcopy'
+alias gowd='cd "`pbpaste`"'
+
+# flush the DNS cache
+alias flushcache='dscacheutil -flushcache'

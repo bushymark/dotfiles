@@ -37,5 +37,5 @@ BBLUE='\e[44m'
 BMAGENTA='\e[45m'
 BCYAN='\e[46m'
 BWHITE='\e[47m'
-
-PS1="\n\u:\w \[$EBLACK\]\$(vcprompt)\[$NO_COLOR\] \n → "
+# rvm prompt comes from ~/.rvm/bin/rvm-prompt
+PS1="\n\u:\w \[$ERED\][\$(rvm-prompt i v g)] \[$EBLACK\]\$(vcprompt)\[$NO_COLOR\] \n → "

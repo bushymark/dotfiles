@@ -1,0 +1,87 @@
+# open the root of the given gem passed in by name:
+# eg: mate-bundle-gem nokogiri
+mate-bundle-gem () { mate `bundle show $*`; }
+
+# Open a man page in Preview:
+pman () {
+    man -t "${1}" | open -f -a /Applications/Preview.app
+}
+
+# Open a man page in TextMate:
+tman () {
+  MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
+}
+
+# Quit an OS X application from the command line
+quit () {
+    for app in $*; do
+        osascript -e 'quit app "'$app'"'
+    done
+}
+
+#Relaunch an app from the command line:
+relaunch () {
+    for app in $*; do
+        osascript -e 'quit app "'$app'"';
+        sleep 2;
+        open -a $app
+    done
+}
+
+
+# Change directory to the directory shown in the top-most Finder window:
+cdf () {
+   currFolderPath=$( /usr/bin/osascript <<"         EOT"
+       tell application "Finder"
+           try
+               set currFolder to (folder of the front window as alias)
+           on error
+               set currFolder to (path to desktop folder as alias)
+           end try
+           POSIX path of currFolder
+       end tell
+         EOT
+   )
+   echo "cd to \"$currFolderPath\""
+   cd "$currFolderPath"
+}
+
+
+# mdfind to use spotlight from the command line - really really really handy! 
+# Finds things in every directory as well, so it's more useful when looking 
+# for files that are part of the system.
+# 
+# mdfind -live updates in real time, which again is incredibly handy.
+
+# When you're editing a particularly long and gnarly command line ^X^E 
+# (Ctrl-X Ctrl-E) will pop you into your editor and let you work on it there.
+
+# You can also use other emacs keybindings: 
+# ctrl-b, ctrl-f (forward or backward one); 
+# ctrl-k (kill from position to end of line); 
+# ctrl-y (paste previously killed text); 
+# ctrl-p, ctrl-n (up or down in command line history)
+
+# Ctrl-a moves to the start of the line
+# Ctrl-e moves to the end of the line
+# Ctrl-b move back on character
+# Ctrl-f move forward one character
+# Esc-b move back one word
+# Esc-f move forward one word
+# Ctrl-u delete from the cursor to the beginning of the line
+# Ctrl-k delete from the cursor to the end of the line
+
+
+# hdutil
+# With hdiutil you can easilly mount a disk image:
+# 
+# hdiutil mount ~/Desktop/lastest_webkit.dmg
+# Dismounting (hacker way):
+# 
+# hdiutil detach `df | grep WebKit | perl -pe 's@^/dev/([a-zA-Z0-9]+).*@$1@'`
+# Dismounting (easy way):
+# 
+# hdiutil detach /Volumes/<mountpoint>
+# or take the easier approach (that churnd suggested below):
+# 
+# hdiutil detach /Volumes/latest_webkit
