@@ -46,6 +46,25 @@ cdf () {
    cd "$currFolderPath"
 }
 
+# change directory into the gems of the given RVM ruby
+function cdgems() {
+  /usr/bin/osascript -e "tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down"
+  /usr/bin/osascript -e "tell application \"Terminal\" to do script with command \"cd $GEM_HOME/gems\" in window 1"
+  /usr/bin/osascript -e "tell application \"System Events\" to tell process \"Terminal\" to keystroke \"k\" using command down"
+  return 0
+}
+
+# run cucumver for a single file
+function c () {
+  if [ $# -eq 0 ]; then
+    local cmd="bundle exec cucumber"
+  else
+    local cmd="bundle exec cucumber $@ --require features"
+  fi
+  echo $cmd
+  eval $cmd
+}
+
 
 # mdfind to use spotlight from the command line - really really really handy! 
 # Finds things in every directory as well, so it's more useful when looking 

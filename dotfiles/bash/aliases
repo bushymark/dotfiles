@@ -16,11 +16,9 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
 
+alias be='bundle exec'
 
 # rails
-alias ss="./script/server"
-alias sa="./script/autospec"
-alias sc='script/console'
 alias tlog='tail -f log/development.log'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
@@ -57,3 +55,8 @@ alias gowd='cd "`pbpaste`"'
 
 # flush the DNS cache
 alias flushcache='dscacheutil -flushcache'
+
+alias cdgems=cdgems
+
+# snag the sha1 of the last commit to the pasteboard
+alias giti="ruby -e 'puts %x(git log -n 1).match(/[a-f0-9]{40}/)' | pbcopy"

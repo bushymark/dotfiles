@@ -1,0 +1,36 @@
+#!/bin/sh
+
+HOSTNAME=`echo $@ | sed s/.*@//`
+
+# set_bg () {
+#   osascript -e "tell application \"Terminal\" to set background color of window 1 to $1"
+# }
+# 
+# on_exit () {
+#   set_bg "{0, 0, 0, 50000}"
+# }
+# trap on_exit EXIT
+# 
+# case $HOSTNAME in
+# 	app1|app2 ) 		
+# 		set_bg "{45000, 0, 0, 50000}" ;;
+# 	db1|db2 )   		
+# 		set_bg "{45000, 0, 0, 50000}" ;;
+# 	media1|media2 ) 
+# 		set_bg "{45000, 0, 0, 50000}" ;;	
+# esac
+
+
+# get the text
+	# osascript -e 'tell application '\"Terminal\"' to tell the front window to get its normal text color'
+
+# set the text
+	# if [ $# -lt 1 ]; then
+	# echo "(termcolor_set) usage: <color>"
+	# exit 1
+	# fi
+	# NEW_COLOR=$*
+	# 
+	# osascript -e 'tell application "Terminal" to tell its front window to set its normal text color to "'"${NEW_COLOR}"'"'
+
+/usr/bin/ssh "$@"

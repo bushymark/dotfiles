@@ -2,7 +2,7 @@ export EDITOR="mate -w"
 
 export GIT_EDITOR="mate -wl1"
 
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH
 
 source ~/bin/git-completion.sh
 
